@@ -1,0 +1,19 @@
+{
+  "name": "data-viz-example",
+  "version": "1.0.0",
+  "description": "A data vizualization example",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config",
+    "dev": "rollup -c -w"
+  },
+  "author": "Oleg Rybin",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "rollup": "^4.20.0",
+    "rollup-plugin-copy-watch": "^0.0.1",
+    "rollup-plugin-serve": "^1.1.1"
+  }
+}
