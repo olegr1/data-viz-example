@@ -11,9 +11,14 @@
   "author": "Oleg Rybin",
   "license": "ISC",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "rollup": "^4.20.0",
     "rollup-plugin-copy-watch": "^0.0.1",
     "rollup-plugin-serve": "^1.1.1"
+  },
+  "dependencies": {
+    "d3": "^7.9.0"
   }
 }

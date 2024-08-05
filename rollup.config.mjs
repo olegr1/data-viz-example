@@ -1,6 +1,8 @@
 import copy from "rollup-plugin-copy-watch";
 import serve from "rollup-plugin-serve";
 import json from "@rollup/plugin-json";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 export default {
   input: "src/main.js",
@@ -21,6 +23,8 @@ export default {
     json({
       compact: true,
     }),
+    resolve(),
+    commonjs(),
   ],
   watch: {
     exclude: "node_modules/**",

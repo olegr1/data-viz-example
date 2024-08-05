@@ -37,3 +37,7 @@ canvas {
   max-width: 100%;
   height: auto;
 }
+
+.chart-bar {
+  fill: #8cbdc1;
+}

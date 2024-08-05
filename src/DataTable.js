@@ -1,12 +1,10 @@
 export class DataTable {
-  constructor(data, elementId) {
+  constructor(elementId, data) {
     this.#createPassengerTable(elementId, data);
   }
 
   #createPassengerTable(elementId, data) {
-    const element = document.getElementById(elementId, data);
-
-    //console.log(data[0]);
+    const element = document.getElementById(elementId);
 
     let tableHeaders = "";
 
@@ -22,7 +20,6 @@ export class DataTable {
       let tableCells = "";
 
       for (const passengerDetail in passenger) {
-        console.log(`${passenger[passengerDetail]}`);
         tableCells += `<td>${passenger[passengerDetail]}</td>`;
       }
 
@@ -30,8 +27,6 @@ export class DataTable {
     });
 
     const table = `<table>${tableHeadersRow + tableRows}</table>`;
-
-    //console.log(data);
 
     element.insertAdjacentHTML("beforeend", table);
   }
