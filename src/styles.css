@@ -39,5 +39,58 @@ canvas {
 }
 
 .chart-bar {
-  fill: #8cbdc1;
+  fill: #2c7da0;
+}
+
+.chart-axis .domain,
+.chart-axis .tick line {
+  stroke: #012a4a;
+}
+
+.toggle-button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.toggle-button-text {
+}
+
+.toggle-button-visual {
+  width: 42px;
+  height: 24px;
+  border-radius: 12px;
+  background-color: #c0c0c0;
+  transition: background-color;
+  position: relative;
+}
+
+.toggle-button[aria-pressed="true"] .toggle-button-visual {
+  background-color: #2a6f97;
+}
+
+.toggle-button-visual:before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-button[aria-pressed="true"] .toggle-button-visual:before {
+  transform: translateX(18px);
+}
+
+.chart-label {
+  font-size: 12px;
+  text-anchor: middle;
+  font-weight: bold;
 }
