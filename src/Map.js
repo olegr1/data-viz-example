@@ -41,7 +41,7 @@ export class Map {
       container: elementId,
       zoom: 9,
       style:
-        "https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL",
+        "https://api.maptiler.com/maps/streets/style.json?key=ZcY6gxhp822E0VEwjEBJ",
     });
 
     const coordinatesOnly = geojsonFeatures.map(
@@ -61,7 +61,17 @@ export class Map {
         type: "circle",
         source: "points",
         paint: {
-          "circle-color": "#EE6C4D",
+          "circle-color": [
+            "match",
+            ["get", "name"],
+            "S",
+            "#c73f1f",
+            "C",
+            "#1097b9",
+            "Q",
+            "#e19400",
+            "#000000",
+          ],
           "circle-opacity": 1,
           "circle-radius": 20,
         },
@@ -73,7 +83,11 @@ export class Map {
         source: "points",
         layout: {
           "text-field": ["get", "embarked"],
-          "text-size": 12,
+          "text-font": ["Arial Unicode MS Bold"],
+          "text-size": 13,
+        },
+        paint: {
+          "text-color": "#FFFFFF",
         },
       });
 
@@ -84,7 +98,7 @@ export class Map {
 
       map.fitBounds(bounds, {
         padding: 100,
-        duration: 0,
+        duration: 1000,
       });
     });
   }

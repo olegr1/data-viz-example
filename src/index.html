@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Data Visualization Example</title>
+    <title>Titanic passenger data vizualization</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/maplibre-gl@4.5.1/dist/maplibre-gl.css"
@@ -13,17 +20,56 @@
   </head>
   <body>
     <main id="main">
-      <h1>Titanic passenger data visualized</h1>
-      <h2>Age group breakdown</h2>
-      <button id="barChartToggle" class="toggle-button" aria-pressed="false">
-        <span class="toggle-button-text">Survivors only</span>
-        <span class="toggle-button-visual"></span>
-      </button>
-      <div id="barChartContainer"></div>
-      <h2>Breakdown by port of embarkation</h2>
-      <div id="mapContainer" class="map-container"></div>
+      <div class="container">
+        <h1 class="heading-main">Titanic passenger data visualization</h1>
+        <p class="paragraph-main">
+          An exrecise in data visualization and familiarizing myself with
+          <a href="https://d3js.org/">D3.js</a> and
+          <a href="https://d3js.org/">MapLibre GL JS</a> using the
+          <a
+            href="https://github.com/datasciencedojo/datasets/blob/master/titanic.csv"
+            >Titanic passenger dataset</a
+          >.
+        </p>
+        <p class="paragraph-main">
+          The source code can be found at:
+          <a href="https://github.com/olegr1/data-viz-example"
+            >https://github.com/olegr1/data-viz-example</a
+          >
+        </p>
 
-      <div id="passengerTableWrap"></div>
+        <div class="chart-map-wrap">
+          <div class="chart-wrap">
+            <h2 class="heading-secondary">Age group breakdown</h2>
+            <p class="clarification">
+              This chart shows the breakdown of Titanic passengers
+              <i>with known age</i> into age groups.
+            </p>
+            <button
+              id="barChartToggle"
+              class="toggle-button"
+              aria-pressed="false"
+            >
+              <span class="toggle-button-text">Survivors only</span>
+              <span class="toggle-button-visual"></span>
+            </button>
+            <div id="barChartContainer"></div>
+          </div>
+
+          <div class="map-wrap">
+            <h2 class="heading-secondary">Breakdown by port of embarkation</h2>
+            <p class="clarification">
+              This map shows the number of people embarking Titanic in
+              <span class="clarification-city-S">Southampton</span>,
+              <span class="clarification-city-Q">Queenstown</span> and
+              <span class="clarification-city-C">Cherbourg</span>
+            </p>
+            <div id="mapContainer" class="map-container"></div>
+          </div>
+        </div>
+        <!-- TBD: -->
+        <!-- <div id="passengerTableWrap"></div> -->
+      </div>
     </main>
   </body>
 </html>

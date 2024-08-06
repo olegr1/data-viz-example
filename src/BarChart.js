@@ -11,9 +11,9 @@ export class BarChart {
   #width = 600;
   #height = 400;
   #marginTop = 40;
-  #marginRight = 20;
+  #marginRight = 0;
   #marginBottom = 30;
-  #marginLeft = 40;
+  #marginLeft = 35;
   #svg;
   #x;
   #y;
@@ -95,10 +95,8 @@ export class BarChart {
 
     this.#svg = d3
       .create("svg")
-      .attr("width", this.#width)
-      .attr("height", this.#height)
       .attr("viewBox", [0, 0, this.#width, this.#height])
-      .attr("style", "max-width: 100%; height: auto;");
+      .attr("class", "chart");
 
     this.#svg
       .append("g")
@@ -123,7 +121,7 @@ export class BarChart {
       .append("text")
       .attr("class", "chart-label")
       .attr("x", (d) => this.#x(d.groupTitle) + this.#x.bandwidth() / 2)
-      .attr("y", (d) => this.#y(d.passengers.length) - 5)
+      .attr("y", (d) => this.#y(d.passengers.length) - 10)
       .text((d) => d.passengers.length);
 
     this.#svg
