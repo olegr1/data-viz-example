@@ -100,3 +100,8 @@ canvas {
   text-anchor: middle;
   font-weight: bold;
 }
+
+.map-container {
+  width: 600px;
+  height: 400px;
+}

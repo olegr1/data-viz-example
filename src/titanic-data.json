@@ -865,7 +865,7 @@
     "Ticket": "113572",
     "Fare": 80,
     "Cabin": "B28",
-    "Embarked": ""
+    "Embarked": "S"
   },
   {
     "PassengerId": 63,
@@ -11617,7 +11617,7 @@
     "Ticket": "113572",
     "Fare": 80,
     "Cabin": "B28",
-    "Embarked": ""
+    "Embarked": "S"
   },
   {
     "PassengerId": 831,
