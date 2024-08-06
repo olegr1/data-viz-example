@@ -10,6 +10,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html,
+body,
+#map {
+  height: 100%;
+}
+
 *,
 *::before,
 *::after {
@@ -39,12 +45,12 @@ canvas {
 }
 
 .chart-bar {
-  fill: #2c7da0;
+  fill: #98c1d9;
 }
 
 .chart-axis .domain,
 .chart-axis .tick line {
-  stroke: #012a4a;
+  stroke: #3d5a80;
 }
 
 .toggle-button {
